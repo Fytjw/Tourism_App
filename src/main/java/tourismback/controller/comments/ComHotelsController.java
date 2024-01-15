@@ -40,5 +40,7 @@ public class ComHotelsController {
     }
 
     @DeleteMapping
-    public void deleteComHotels(Long id) { comHotelsService.deleteComHotels(id); }
+    public void deleteComHotels(
+            @PathVariable(name = "id") Long id
+    ) { comHotelsService.deleteComHotels(id); }
 }
