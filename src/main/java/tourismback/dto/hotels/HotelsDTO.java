@@ -11,4 +11,5 @@ public class HotelsDTO {
     private double longitude;
     private double latitude;
     private String address;
+    private String city;
 }

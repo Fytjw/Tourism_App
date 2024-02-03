@@ -33,4 +33,7 @@ public class Restaurants {
 
     @Column(name = "avgBil")
     private int avgBil;
+
+    @Column(name = "city")
+    private String city;
 }

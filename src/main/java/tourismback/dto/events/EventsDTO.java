@@ -14,4 +14,5 @@ public class EventsDTO {
     private double latitude;
     private String address;
     private Date date;
+    private String city;
 }

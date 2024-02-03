@@ -12,4 +12,5 @@ public class RestaurantsDTO {
     private double latitude;
     private String address;
     private int avgBil;
+    private String city;
 }

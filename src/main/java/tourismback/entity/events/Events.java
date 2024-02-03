@@ -36,4 +36,7 @@ public class Events {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "date")
     private Date date;
+
+    @Column(name = "city")
+    private String city;
 }
