@@ -2,7 +2,7 @@ package tourismback.service.events;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tourismback.dto.events.EventsDTO;
+import tourismback.models.dto.events.EventsDTO;
 import tourismback.mapper.events.EventsMapper;
 import tourismback.repository.events.EventsRepository;
 

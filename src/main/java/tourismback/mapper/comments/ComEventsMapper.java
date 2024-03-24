@@ -3,7 +3,7 @@ package tourismback.mapper.comments;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import tourismback.dto.comments.ComEventsDTO;
+import tourismback.models.dto.comments.ComEventsDTO;
 import tourismback.entity.comments.ComEvents;
 
 import java.util.List;

@@ -2,7 +2,7 @@ package tourismback.service.favorite;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tourismback.dto.favorite.FavEventsDTO;
+import tourismback.models.dto.favorite.FavEventsDTO;
 import tourismback.mapper.favorite.FavEventsMapper;
 import tourismback.repository.favorite.FavEventsRepository;
 

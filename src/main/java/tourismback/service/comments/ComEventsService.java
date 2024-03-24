@@ -2,7 +2,7 @@ package tourismback.service.comments;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tourismback.dto.comments.ComEventsDTO;
+import tourismback.models.dto.comments.ComEventsDTO;
 import tourismback.mapper.comments.ComEventsMapper;
 import tourismback.repository.comments.ComEventsRepository;
 

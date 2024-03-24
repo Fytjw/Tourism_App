@@ -2,10 +2,13 @@ package tourismback.service.auth;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tourismback.dto.auth.UsersDTO;
+import org.springframework.web.multipart.MultipartFile;
+import tourismback.entity.auth.Users;
+import tourismback.models.dto.auth.UsersDTO;
 import tourismback.mapper.auth.UsersMapper;
 import tourismback.repository.auth.UsersRepository;
 
+import java.io.IOException;
 import java.util.List;
 
 @Service
@@ -39,4 +42,15 @@ public class UsersService {
     public UsersDTO loginUser(String email, String password){
         return usersMapper.toDto( usersRepository.findByEmailAndPassword(email, password));
     }
+
+    public void saveAvatar(MultipartFile file, Long id) throws IOException {
+        Users users= usersRepository.findById(id).orElse(new Users());
+        users.setAvatar(file.getBytes());
+        usersRepository.save(users);
+    }
+
+    public byte[] getImageByUserId(Long id) {
+        return usersRepository.findById(id).orElse(new Users()).getAvatar();
+    }
+
 }

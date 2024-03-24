@@ -4,8 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tourismback.dto.auth.LoginDTO;
-import tourismback.dto.auth.UsersDTO;
+import tourismback.models.dto.auth.LoginDTO;
+import tourismback.models.dto.auth.UsersDTO;
 import tourismback.service.auth.UsersService;
 
 @RestController

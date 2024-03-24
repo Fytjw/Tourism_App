@@ -3,7 +3,7 @@ package tourismback.mapper.favorite;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import tourismback.dto.favorite.FavRestaurantsDTO;
+import tourismback.models.dto.favorite.FavRestaurantsDTO;
 import tourismback.entity.favorite.FavRestaurants;
 
 import java.util.List;

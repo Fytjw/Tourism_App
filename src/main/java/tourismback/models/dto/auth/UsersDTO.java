@@ -1,4 +1,4 @@
-package tourismback.dto.auth;
+package tourismback.models.dto.auth;
 
 import lombok.Data;
 

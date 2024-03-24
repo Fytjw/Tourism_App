@@ -1,4 +1,4 @@
-package tourismback.dto.events;
+package tourismback.models.dto.events;
 
 import lombok.Data;
 

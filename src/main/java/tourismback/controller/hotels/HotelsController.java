@@ -2,7 +2,7 @@ package tourismback.controller.hotels;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tourismback.dto.hotels.HotelsDTO;
+import tourismback.models.dto.hotels.HotelsDTO;
 import tourismback.service.hotels.HotelsService;
 
 import java.util.List;

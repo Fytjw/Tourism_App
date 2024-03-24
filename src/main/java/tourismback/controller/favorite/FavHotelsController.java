@@ -2,7 +2,7 @@ package tourismback.controller.favorite;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tourismback.dto.favorite.FavHotelsDTO;
+import tourismback.models.dto.favorite.FavHotelsDTO;
 import tourismback.service.favorite.FavHotelsService;
 
 import java.util.List;

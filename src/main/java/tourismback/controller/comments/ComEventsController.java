@@ -2,7 +2,7 @@ package tourismback.controller.comments;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tourismback.dto.comments.ComEventsDTO;
+import tourismback.models.dto.comments.ComEventsDTO;
 import tourismback.service.comments.ComEventsService;
 
 import java.util.List;

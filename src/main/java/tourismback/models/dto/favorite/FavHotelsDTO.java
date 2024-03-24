@@ -1,8 +1,8 @@
-package tourismback.dto.favorite;
+package tourismback.models.dto.favorite;
 
 import lombok.Data;
-import tourismback.dto.auth.UsersDTO;
-import tourismback.dto.hotels.HotelsDTO;
+import tourismback.models.dto.auth.UsersDTO;
+import tourismback.models.dto.hotels.HotelsDTO;
 
 @Data
 public class FavHotelsDTO {

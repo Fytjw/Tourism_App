@@ -1,8 +1,8 @@
-package tourismback.dto.comments;
+package tourismback.models.dto.comments;
 
 import lombok.Data;
-import tourismback.dto.auth.UsersDTO;
-import tourismback.dto.restaurants.RestaurantsDTO;
+import tourismback.models.dto.auth.UsersDTO;
+import tourismback.models.dto.restaurants.RestaurantsDTO;
 
 @Data
 public class ComRestaurantsDTO {

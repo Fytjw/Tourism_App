@@ -2,8 +2,8 @@ package tourismback.service.restaurants;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tourismback.dto.restaurants.FoodDTO;
-import tourismback.dto.restaurants.MenuDTO;
+import tourismback.models.dto.restaurants.FoodDTO;
+import tourismback.models.dto.restaurants.MenuDTO;
 import tourismback.mapper.restaurants.MenuMapper;
 import tourismback.repository.restaurants.MenuRepository;
 

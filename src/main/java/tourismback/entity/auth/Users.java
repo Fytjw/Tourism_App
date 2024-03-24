@@ -1,6 +1,7 @@
 package tourismback.entity.auth;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 @Entity
@@ -21,4 +22,8 @@ public class Users {
 
     @Column(name = "name")
     private String name;
+
+    @Lob
+    private byte[] avatar;
+
 }

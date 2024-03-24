@@ -1,4 +1,4 @@
-package tourismback.dto.restaurants;
+package tourismback.models.dto.restaurants;
 
 import lombok.Data;
 

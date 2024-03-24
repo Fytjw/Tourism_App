@@ -2,7 +2,7 @@ package tourismback.service.restaurants;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tourismback.dto.restaurants.FoodDTO;
+import tourismback.models.dto.restaurants.FoodDTO;
 import tourismback.mapper.restaurants.FoodMapper;
 import tourismback.repository.restaurants.FoodRepository;
 

@@ -2,7 +2,7 @@ package tourismback.controller.restaurants;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tourismback.dto.restaurants.RestaurantsDTO;
+import tourismback.models.dto.restaurants.RestaurantsDTO;
 import tourismback.service.restaurants.RestaurantsService;
 
 import java.util.List;

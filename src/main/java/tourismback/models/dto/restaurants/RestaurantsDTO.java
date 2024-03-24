@@ -1,9 +1,9 @@
-package tourismback.dto.places;
+package tourismback.models.dto.restaurants;
 
 import lombok.Data;
 
 @Data
-public class PlacesDTO {
+public class RestaurantsDTO {
     private Long id;
     private String name;
     private int rating;
@@ -11,5 +11,6 @@ public class PlacesDTO {
     private double longitude;
     private double latitude;
     private String address;
+    private int avgBil;
     private String city;
 }

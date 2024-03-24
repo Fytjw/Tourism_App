@@ -1,7 +1,7 @@
 package tourismback.mapper.events;
 
 import org.mapstruct.Mapper;
-import tourismback.dto.events.EventsDTO;
+import tourismback.models.dto.events.EventsDTO;
 import tourismback.entity.events.Events;
 
 import java.util.List;

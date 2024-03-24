@@ -2,7 +2,7 @@ package tourismback.service.places;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tourismback.dto.places.PlacesDTO;
+import tourismback.models.dto.places.PlacesDTO;
 import tourismback.mapper.places.PlacesMapper;
 import tourismback.repository.places.PlacesRepository;
 

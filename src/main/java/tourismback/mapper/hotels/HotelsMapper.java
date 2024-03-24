@@ -1,7 +1,7 @@
 package tourismback.mapper.hotels;
 
 import org.mapstruct.Mapper;
-import tourismback.dto.hotels.HotelsDTO;
+import tourismback.models.dto.hotels.HotelsDTO;
 import tourismback.entity.hotels.Hotels;
 
 import java.util.List;

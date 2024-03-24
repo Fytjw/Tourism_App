@@ -1,7 +1,7 @@
 package tourismback.mapper.auth;
 
 import org.mapstruct.Mapper;
-import tourismback.dto.auth.UsersDTO;
+import tourismback.models.dto.auth.UsersDTO;
 import tourismback.entity.auth.Users;
 
 import java.util.List;

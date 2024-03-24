@@ -3,7 +3,7 @@ package tourismback.mapper.restaurants;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import tourismback.dto.restaurants.MenuDTO;
+import tourismback.models.dto.restaurants.MenuDTO;
 import tourismback.entity.restaurants.Menu;
 
 import java.util.List;

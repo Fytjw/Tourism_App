@@ -2,7 +2,7 @@ package tourismback.controller.events;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tourismback.dto.events.EventsDTO;
+import tourismback.models.dto.events.EventsDTO;
 import tourismback.service.events.EventsService;
 
 import java.util.List;
