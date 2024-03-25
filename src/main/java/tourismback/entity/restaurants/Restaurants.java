@@ -36,4 +36,5 @@ public class Restaurants {
 
     @Column(name = "city")
     private String city;
+
 }

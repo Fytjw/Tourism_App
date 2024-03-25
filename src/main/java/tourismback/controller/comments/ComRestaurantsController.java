@@ -1,8 +1,11 @@
 package tourismback.controller.comments;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import tourismback.models.dto.comments.ComRestaurantsDTO;
+import tourismback.security.MyUserDetails;
 import tourismback.service.comments.ComRestaurantsService;
 
 import java.util.List;
@@ -29,6 +32,9 @@ public class ComRestaurantsController {
     public ComRestaurantsDTO addComRestaurants(
             @RequestBody ComRestaurantsDTO comRestaurantsDTO
     ){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        MyUserDetails userDetails = (MyUserDetails) authentication.getPrincipal();
+        comRestaurantsDTO.getUser().setId(userDetails.users.getId());
         return comRestaurantsService.addComRestaurants(comRestaurantsDTO);
     }
 

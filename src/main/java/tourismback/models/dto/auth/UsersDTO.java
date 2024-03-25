@@ -1,5 +1,6 @@
 package tourismback.models.dto.auth;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data

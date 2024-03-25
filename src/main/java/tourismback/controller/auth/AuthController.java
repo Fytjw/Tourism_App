@@ -3,6 +3,7 @@ package tourismback.controller.auth;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import tourismback.models.dto.auth.LoginDTO;
 import tourismback.models.dto.auth.UsersDTO;
@@ -13,14 +14,14 @@ import tourismback.service.auth.UsersService;
 @RequiredArgsConstructor
 public class AuthController {
     private final UsersService usersService;
+    private final PasswordEncoder passwordEncoder;
 
     @PostMapping("signup")
     public ResponseEntity<?> signupUser(@RequestBody UsersDTO usersDTO){
         if(usersService.hasUserWithEmail(usersDTO.getEmail()))
             return new ResponseEntity<>("User already exist with this email", HttpStatus.NOT_ACCEPTABLE);
         UsersDTO createdUserDto = usersService.addUser(usersDTO);
-        if (createdUserDto == null) return new ResponseEntity<>(
-                "User not created, Come again later", HttpStatus.BAD_REQUEST);
+        createdUserDto.setPassword(passwordEncoder.encode(createdUserDto.getPassword()));
         return new ResponseEntity<>(createdUserDto, HttpStatus.CREATED);
     }
 
