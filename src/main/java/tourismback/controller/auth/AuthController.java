@@ -16,7 +16,7 @@ public class AuthController {
     private final UsersService usersService;
     private final PasswordEncoder passwordEncoder;
 
-    @PostMapping("signup")
+    @PostMapping("/signup")
     public ResponseEntity<?> signupUser(@RequestBody UsersDTO usersDTO){
         if(usersService.hasUserWithEmail(usersDTO.getEmail()))
             return new ResponseEntity<>("User already exist with this email", HttpStatus.NOT_ACCEPTABLE);
@@ -25,7 +25,7 @@ public class AuthController {
         return new ResponseEntity<>(createdUserDto, HttpStatus.CREATED);
     }
 
-    @GetMapping("login")
+    @GetMapping("/login")
     public ResponseEntity<?> loginUser(@RequestBody LoginDTO loginDTO){
         if(!usersService.hasUserWithEmail(loginDTO.getEmail()))
             return new ResponseEntity<>("User does not exists!", HttpStatus.NOT_ACCEPTABLE);
