@@ -32,9 +32,6 @@ public class ComRestaurantsController {
     public ComRestaurantsDTO addComRestaurants(
             @RequestBody ComRestaurantsDTO comRestaurantsDTO
     ){
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        MyUserDetails userDetails = (MyUserDetails) authentication.getPrincipal();
-        comRestaurantsDTO.getUser().setId(userDetails.users.getId());
         return comRestaurantsService.addComRestaurants(comRestaurantsDTO);
     }
 

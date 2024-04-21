@@ -33,4 +33,7 @@ public class Hotels {
 
     @Column(name = "city")
     private String city;
+
+    @Lob
+    private byte[] image;
 }

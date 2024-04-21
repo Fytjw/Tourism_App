@@ -11,14 +11,15 @@ import tourismback.service.auth.UsersService;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("api/user")
+@RequestMapping("/api/user")
 @RequiredArgsConstructor
 public class UserController {
 
     private final UsersService usersService;
 
     @PostMapping("/upload/{id}")
-    public ResponseEntity<HttpStatus> uploadImage(@RequestParam("image") MultipartFile image, @PathVariable Long id) throws IOException {
+    public ResponseEntity<HttpStatus> uploadImage(@RequestParam("image") MultipartFile image,
+                                                  @PathVariable Long id) throws IOException {
         usersService.saveAvatar(image, id);
         return ResponseEntity.ok(HttpStatus.OK);
     }

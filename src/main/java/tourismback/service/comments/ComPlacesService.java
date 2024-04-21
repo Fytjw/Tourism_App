@@ -1,10 +1,13 @@
 package tourismback.service.comments;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import tourismback.models.dto.comments.ComPlacesDTO;
 import tourismback.mapper.comments.ComPlacesMapper;
 import tourismback.repository.comments.ComPlacesRepository;
+import tourismback.security.MyUserDetails;
 
 import java.util.List;
 
@@ -23,6 +26,7 @@ public class ComPlacesService {
     }
 
     public ComPlacesDTO addComPlaces(ComPlacesDTO comPlacesDTO){
+        comPlacesDTO.getUser().setId(getCurrentUserId());
         return comPlacesMapper.toDto(comPlacesRepository.save(comPlacesMapper.toModel(comPlacesDTO)));
     }
 
@@ -33,4 +37,11 @@ public class ComPlacesService {
     public void deleteComPlaces(Long id){
         comPlacesRepository.deleteById(id);
     }
+
+    private Long getCurrentUserId(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        MyUserDetails userDetails = (MyUserDetails) authentication.getPrincipal();
+        return userDetails.users.getId();
+    }
+
 }

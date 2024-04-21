@@ -1,8 +1,11 @@
 package tourismback.controller.comments;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import tourismback.models.dto.comments.ComEventsDTO;
+import tourismback.security.MyUserDetails;
 import tourismback.service.comments.ComEventsService;
 
 import java.util.List;
@@ -29,6 +32,7 @@ public class ComEventsController {
     public ComEventsDTO addComEvents(
             @RequestBody ComEventsDTO comEventsDTO
     ){
+        comEventsDTO.getUser().setId(getCurrentUserId());
         return comEventsService.addComEvents(comEventsDTO);
     }
 
@@ -44,5 +48,11 @@ public class ComEventsController {
             @PathVariable(name = "id") Long id
     ){
         comEventsService.deleteComEvents(id);
+    }
+
+    private Long getCurrentUserId(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        MyUserDetails userDetails = (MyUserDetails) authentication.getPrincipal();
+        return userDetails.users.getId();
     }
 }
